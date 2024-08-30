@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+
+.title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 23px;
+}
+
+.title_email {
+    color: #fff6;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 0px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+}
+
+body {
+    color-scheme: dark;
+    background: #000000;
+    color: white;
+}
+
+.columns {
+    display: grid;
+    & > div {
+      padding: 0.5rem;
+    }
+}
+
+@media (min-width: 940px) {
+    .columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.hoverable {
+  & .hiddable {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover .hiddable {
+    opacity: 1;
+  }
+}
