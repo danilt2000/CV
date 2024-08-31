@@ -13,7 +13,7 @@ gear.addEventListener('click', () => {
 })
 
 const onScroll = () => {
-  gear.style.left = window.scrollY > 50 ? '-120px' : 'calc(33% - 50px)';
+  gear.style.left = window.scrollY > 50 ? '-145px' : 'calc(33% - 50px)';
   scrollIndicator.style.width =`${(document.documentElement.scrollTop /
     (document.documentElement.scrollHeight -
       document.documentElement.clientHeight)) *

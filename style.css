@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0px;
 }
 
 :root {
@@ -41,7 +42,7 @@ body {
 
 .columns {
     display: grid;
-    padding-bottom: 10rem;
+    /* padding-bottom: 10rem; */
     background: black;
 
     &>div {
@@ -125,10 +126,17 @@ body {
     color: #fff6;
 }
 
+.hero-spacer {
+    height: 700px !important;
+}
+
+
 .rotating-image {
-    width: 200px;
-    height: 200px;
+    z-index: 1000;
     animation: spin 10s linear infinite;
+
+    width: 250px;
+    height: 250px;
 }
 
 @keyframes spin {
@@ -143,8 +151,8 @@ body {
 }
 
 .gear {
-    opacity: 0.2;
-    filter: saturate(0);
+    /* opacity: 0.8; */
+    filter: saturate(0) brightness(0.27);
     position: fixed;
     top: 200px;
     left: calc(33% - 100px);
@@ -153,7 +161,7 @@ body {
     border: none;
     cursor: pointer;
     user-select: none;
-    z-index: 100;
+    z-index: 1000;
 
     &:hover {
         transform: scale(1.05);
@@ -167,7 +175,10 @@ body {
 
 .about {
     position: relative;
-    z-index: 2;
+    z-index: 100;
+
+    background: #000000;
+
 }
 
 .headers {
@@ -177,13 +188,24 @@ body {
     padding-top: .8rem;
     background: #0006;
     backdrop-filter: blur(10px);
+
+    z-index: 5;
+    /* grid-column-gap: 16px; */
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: #000000ba;
+    /* justify-content: space-around; */
+    /* align-items: flex-start; */
+    /* margin: 244px -16px 0; */
+    /* padding: 20px 16px 18px; */
+    /* display: flex; */
+    position: sticky;
+    top: 0;
 }
 
 .about-content {
     backdrop-filter: none !important;
     /* height: 2000px; */
-
-
 }
 
 .scroll-indicator {
@@ -192,7 +214,7 @@ body {
     left: 0;
     height: 2px;
     background: #fff;
-    z-index: 100;
+    z-index: 1000;
 }
 
 /* 
@@ -268,7 +290,7 @@ body {
     height: auto;
     display: block;
     transition: filter 0.6s ease-in-out, opacity 0.6s ease-in-out;
-    filter: brightness(10%);
+    filter: brightness(22%);
 }
 
 .brightness:hover {
