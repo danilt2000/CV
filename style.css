@@ -3,14 +3,7 @@
 }
 
 :root {
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
-}
-
-@supports (font-variation-settings: normal) {
-    :root {
-        font-family: InterVariable, sans-serif;
-    }
+    font-family: 'Geist Mono', monospace;
 }
 
 
@@ -30,8 +23,9 @@
     display: block;
     transition: color 0.3s ease-in-out;
     text-decoration: none;
+
     &:hover {
-      color: white;
+        color: white;
     }
 }
 
@@ -43,8 +37,10 @@ body {
 
 .columns {
     display: grid;
-    & > div {
-      padding: 0.5rem;
+    padding-bottom: 10rem;
+
+    &>div {
+        padding: 0.5rem;
     }
 }
 
@@ -55,11 +51,81 @@ body {
 }
 
 .hoverable {
-  & .hiddable {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  &:hover .hiddable {
-    opacity: 1;
-  }
+    & .hiddable {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover .hiddable {
+        opacity: 1;
+    }
 }
+
+.employment-history>div {
+    display: grid;
+    grid-template-columns: 3rem 10rem 1fr;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+
+    & :nth-child(1) {
+        color: #fff6;
+        font-weight: 300;
+    }
+
+    & :nth-child(2) {
+        font-weight: 500;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    & :nth-child(3) {
+        color: #fff8;
+    }
+}
+
+.skills {
+    padding-top: 285px;
+    font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+}
+
+.gray {
+    color: #fff6;
+}
+
+.rotating-image {
+    width: 200px;
+    height: 200px;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero {
+    position: relative;
+}
+
+.gear {
+    opacity: 0.2;
+    filter: saturate(0);
+    position: absolute;
+    top: 200px;
+    left: calc(33% - 100px);
+    transition: transform 0.3s ease-in-out;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
