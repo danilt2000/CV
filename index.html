@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="https://unpkg.com/@fontsource/geist-mono@5.0.3/index.css">
     <link rel="stylesheet" href="style.css">
     <title>Danil Thackenko</title>
-    
+
     <script defer src="script.js"></script>
 </head>
 
 <body>
+    <div class="scroll-indicator"></div>
+    <button class="gear">
+        <img class="rotating-image" src="gear.webp" alt="A photo of a gear rotating">
+    </button>
     <section class="columns hero">
-        <button class="gear">
-            <img class="rotating-image" src="gear.webp" alt="">
-        </button>
         <div class="title">
 
             <div>
@@ -78,26 +79,80 @@
             <div class="skills">
                 <div class="gray">Skills</div>
                 <div>
-                    1231231
-                    1231231
-                    1231231
-                    1231231
-                    1231231
-                    1231231
-                    1231231
-                    1231231
-                    1231231
-                    1231231
-                    1231231
+                    C#
+                    C++
+                    Docker
+                    Kubernetes
+                    Linux
+                    Devops
+                    Nginx
+                    SQL
+                    Blender
+                    Azure
+                    ASP
+                    MAUI
                 </div>
             </div>
         </div>
     </section>
-    <section class="columns">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="hero-spacer">
+
+    </div>
+    <script>
+        const hero = document.querySelector('.hero');
+        const heroSpacer = document.querySelector('.hero-spacer');
+        heroSpacer.style.height = hero.clientHeight + 'px';
+    </script>
+    <section class="about">
+        <div class="columns headers">
+            <div>About</div>
+            <div>Work</div>
+            <div>Playground</div>
+        </div>
+        <div class="columns about-content">
+            <div>
+                <img src="miku.jpg" alt="A photo of a gear rotating">
+                <p>About Me — Passionate and results-driven Developer with a proven track record of delivering robust,
+                    scalable solutions. My motivation comes from a deep commitment to innovation and continuous
+                    improvement, always aiming to push the boundaries of what’s possible. Proficient in C# С++, .NET,
+                    and cloud technologies,  I thrive in dynamic environments where I can leverage my skills to drive
+                    impactful results.</p>
+                <img src="mvcharity.jpg" class="mvcharity" alt="A photo of a gear rotating">
+                <p></p>
+            </div>
+
+            <div>
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+                gdfgfd
+
+
+
+            </div>
+            <div></div>
+            <div></div>
+        </div>
     </section>
+
 </body>
 
 </html>

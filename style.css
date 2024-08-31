@@ -4,6 +4,8 @@
 
 :root {
     font-family: 'Geist Mono', monospace;
+    scroll-behavior: smooth;
+    color-scheme: dark;
 }
 
 
@@ -33,11 +35,14 @@ body {
     color-scheme: dark;
     background: #000000;
     color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .columns {
     display: grid;
     padding-bottom: 10rem;
+    background: black;
 
     &>div {
         padding: 0.5rem;
@@ -110,22 +115,56 @@ body {
 }
 
 .hero {
-    position: relative;
+    position: fixed;
+    inset: 0;
 }
 
 .gear {
     opacity: 0.2;
     filter: saturate(0);
-    position: absolute;
+    position: fixed;
     top: 200px;
     left: calc(33% - 100px);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, left 0.3s ease-in-out;
     background: transparent;
     border: none;
     cursor: pointer;
     user-select: none;
+    z-index: 100;
+
     &:hover {
         transform: scale(1.05);
     }
 }
 
+.mvcharity {
+    width: 600px;
+    height: auto;
+}
+
+.about {
+    position: relative;
+    z-index: 2;
+}
+
+.headers {
+    position: sticky;
+    top: 0;
+    padding-bottom: 0px;
+    padding-top: .8rem;
+    background: #0006;
+    backdrop-filter: blur(10px);
+}
+
+.about-content {
+    height: 2000px;
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: #fff;
+    z-index: 100;
+}
