@@ -116,7 +116,7 @@ body {
     }
 
     & :nth-child(3) {
-        color: #fff8;
+        color: #BBBBBB;
     }
 }
 
@@ -337,6 +337,11 @@ body {
 .link {
     color: #fff;
     text-decoration: underline;
+}
+
+.link-portfolio {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* 
