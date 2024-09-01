@@ -317,7 +317,7 @@ body {
     padding-top: 2em;
 }
 
-.small-text{
+.small-text {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
@@ -332,6 +332,11 @@ body {
 .hovered {
     color: #fff;
     /* transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out; */
+}
+
+.link {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* 
