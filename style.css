@@ -3,18 +3,32 @@
     margin: 0px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 :root {
     font-family: 'Geist Mono', monospace;
     scroll-behavior: smooth;
     color-scheme: dark;
 }
 
-
 .title {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     line-height: 23px;
+}
+
+.auto-video {
+    width: 300px;
+    /* Установите желаемую ширину */
+    height: 200px;
+    /* Установите желаемую высоту */
+    object-fit: cover;
+    /* Это свойство сохраняет пропорции видео, заполняя указанные размеры */
+    width: 100%;
+    height: 100%;
 }
 
 .title_email {
@@ -239,6 +253,7 @@ body {
 }
 
 .header-container {
+    color: #fff6;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

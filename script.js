@@ -13,7 +13,6 @@ gear.addEventListener('click', () => {
   isPlaying = !isPlaying;
 })
 
-
 const onScroll = () => {
   // Update gear position based on scroll
   gear.style.left = window.scrollY > 50 ? '-145px' : 'calc(33% - 50px)';
@@ -34,7 +33,6 @@ const onScroll = () => {
   }
 };
 
-
 // const onScroll = () => {
 //   gear.style.left = window.scrollY > 50 ? '-145px' : 'calc(33% - 50px)';
 //   scrollIndicator.style.width = `${(document.documentElement.scrollTop /
@@ -53,31 +51,89 @@ function isUserAtBottom() {
 
 function handleScroll() {
   if (isUserAtBottom()) {
-    // alert("Вы достигли конца страницы!");
-    scrollImages();
-    console.log("Вы достигли конца страницы!");
+
+    scrollPlayGround();
+
+    scrollWork();
+
+    scrollAbout();
   }
 }
 
 window.addEventListener('scroll', handleScroll);
 
+function scrollPlayGround() {
+  var container = document.getElementById('playground-right-containers'); // Find the container by its ID
 
-function scrollImages() {
-  var container = document.getElementById('image-container'); // Find the container by its ID
-  var images = container.querySelectorAll('.auto-photo'); // Select all images within the container
+  var sectionElements = container.querySelectorAll('.section-right-elements'); // Select all images within the container
 
-  if (images.length > 0) {
+  const sectionElement = sectionElements[0]; // Get the first image
 
-    var sectionElements = container.querySelectorAll('.section-element'); // Select all images within the container
+  let contentClone = sectionElement.cloneNode(true); // Клонировать i-ый элемент
 
-    for (let i = 0; i < container.children.length; i++) {
-     const sectionElement = sectionElements[i]; // Get the first image
-
-      let contentClone = sectionElement.cloneNode(true); // Клонировать i-ый элемент
-      container.appendChild(contentClone); // Добавить клон в контейнер
-    }
-
-    console.log("Image processed and moved to the front.");
-
-  }
+  container.appendChild(contentClone);
 }
+
+function scrollWork() {
+  var container = document.getElementById('playground-centr-containers'); // Find the container by its ID
+
+  var sectionElements = container.querySelectorAll('.section-centr-elements'); // Select all images within the container
+
+  const sectionElement = sectionElements[0]; // Get the first image
+
+  let contentClone = sectionElement.cloneNode(true); // Клонировать i-ый элемент
+
+  container.appendChild(contentClone);
+}
+
+function scrollAbout() {
+  var container = document.getElementById('playground-left-containers'); // Find the container by its ID
+
+  var sectionElements = container.querySelectorAll('.section-left-elements'); // Select all images within the container
+
+  const sectionElement = sectionElements[0]; // Get the first image
+
+  let contentClone = sectionElement.cloneNode(true); // Клонировать i-ый элемент
+
+  container.appendChild(contentClone);
+}
+
+// function scrollImagesWork() {
+//   var container = document.getElementById('playground-containers'); // Find the container by its ID
+//   var images = container.querySelectorAll('.auto-photo'); // Select all images within the container
+
+//   if (images.length > 0) {
+
+//     var sectionElements = container.querySelectorAll('.section-element'); // Select all images within the container
+
+//     for (let i = 0; i < container.children.length; i++) {
+//       const sectionElement = sectionElements[i]; // Get the first image
+
+//       let contentClone = sectionElement.cloneNode(true); // Клонировать i-ый элемент
+//       container.appendChild(contentClone); // Добавить клон в контейнер
+//     }
+
+//     console.log("Image processed and moved to the front.");
+
+//   }
+// }
+
+// function scrollImagesPlayGround() {
+//   var container = document.getElementById('playground-containers'); // Find the container by its ID
+//   var images = container.querySelectorAll('.auto-photo'); // Select all images within the container
+
+//   if (images.length > 0) {
+
+//     var sectionElements = container.querySelectorAll('.section-element'); // Select all images within the container
+
+//     for (let i = 0; i < container.children.length; i++) {
+//       const sectionElement = sectionElements[i]; // Get the first image
+
+//       let contentClone = sectionElement.cloneNode(true); // Клонировать i-ый элемент
+//       container.appendChild(contentClone); // Добавить клон в контейнер
+//     }
+
+//     console.log("Image processed and moved to the front.");
+
+//   }
+// }
