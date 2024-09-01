@@ -98,6 +98,113 @@ function scrollAbout() {
   container.appendChild(contentClone);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// const employmentDivsLeft = document.getElementById('playground-left-containers');
+
+// var aboutTextElement = document.querySelectorAll('.about-text');
+
+// employmentDivsLeft.addEventListener('mouseenter', () => {
+//   aboutTextElement.classList.add('hovered');
+// })
+
+// employmentDivsLeft.addEventListener('mouseleave', () => {
+//   aboutTextElement.classList.remove('hovered');
+// });
+
+
+
+
+const employmentDivsLeft = document.getElementById('playground-left-containers');
+const aboutTextElements = document.querySelectorAll('.about-text');
+
+    employmentDivsLeft.addEventListener('mouseenter', () => {
+        aboutTextElements.forEach(element => {
+            element.classList.add('hovered');
+        });
+    });
+
+    employmentDivsLeft.addEventListener('mouseleave', () => {
+        aboutTextElements.forEach(element => {
+            element.classList.remove('hovered');
+        });
+    });
+
+
+
+const employmentDivsCentr = document.getElementById('playground-centr-containers');
+const workTextElements = document.querySelectorAll('.work-text');
+
+employmentDivsCentr.addEventListener('mouseenter', () => {
+      workTextElements.forEach(element => {
+            element.classList.add('hovered');
+        });
+    });
+
+    employmentDivsCentr.addEventListener('mouseleave', () => {
+      workTextElements.forEach(element => {
+            element.classList.remove('hovered');
+        });
+    });
+
+
+    const employmentDivsRight = document.getElementById('playground-right-containers');
+    const playgroundTextElements = document.querySelectorAll('.playground-text');
+    
+    employmentDivsRight.addEventListener('mouseenter', () => {
+      playgroundTextElements.forEach(element => {
+                element.classList.add('hovered');
+            });
+        });
+    
+        employmentDivsRight.addEventListener('mouseleave', () => {
+          playgroundTextElements.forEach(element => {
+                element.classList.remove('hovered');
+            });
+        });
+    
+
+
+
+
+
+
+
+
+
+// const headerContainer = document.querySelector('.header-container');
+
+// employmentDivs.forEach(div => {
+//   div.addEventListener('mouseenter', () => {
+//     headerContainer.classList.add('hovered');
+//   });
+
+//   div.addEventListener('mouseleave', () => {
+//     headerContainer.classList.remove('hovered');
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
 // function scrollImagesWork() {
 //   var container = document.getElementById('playground-containers'); // Find the container by its ID
 //   var images = container.querySelectorAll('.auto-photo'); // Select all images within the container

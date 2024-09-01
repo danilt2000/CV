@@ -252,8 +252,20 @@ body {
     text-align: right;
 }
 
-.header-container {
+.about-text {
     color: #fff6;
+}
+
+.work-text {
+    color: #fff6;
+}
+
+.playground-text {
+    color: #fff6;
+}
+
+.header-container {
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -299,10 +311,28 @@ body {
     filter: brightness(22%);
 }
 
+.p-top-bottom {
+    padding-bottom: 2em;
+
+    padding-top: 2em;
+}
+
+.small-text{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    position: static;
+}
+
 .brightness:hover {
     filter: brightness(100%);
 }
 
+.hovered {
+    color: #fff;
+    /* transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out; */
+}
 
 /* 
 
