@@ -344,6 +344,12 @@ body {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .gear {
+        display: none;
+    }
+}
+
 /* 
 
 @font-face {
